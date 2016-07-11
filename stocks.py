@@ -22,6 +22,5 @@ for purch in purchases:
 print(''.join(['\033[4m\033[1m', 'Purchase Summary:', '\033[0m']))
 for corp, block in summary.items():
     print(''.join(['\033[1m', stockDict[corp], '\033[0m']))
-    for data in block:
-        print(' '.join([ '\t' + str(data[1]), 'shares at', '$' + str(data[3]), 'on', data[2] ]))
+    [print(' '.join([ '\t' + str(data[1]), 'shares at', '$' + str(data[3]), 'on', data[2] ])) for data in block]
 
